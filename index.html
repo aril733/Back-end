@@ -1,0 +1,76 @@
+<!-- 
+Exercício: Sistema de Cadastro de Funcionários com Cálculo de Tributos
+
+Crie um sistema em PHP e HTML que permita o cadastro de funcionários, com os seguintes campos:
+
+-Nome do Funcionário
+-Cargo (1 - Diretor  2 - Gerente 3 - Engenheiro )
+-Salário Bruto
+
+O sistema deve calcular automaticamente os seguintes tributos com base no salário bruto:
+
+-INSS: 9% do salário bruto
+-IRRF: 7.5% do salário bruto
+-Vale Transporte: 6% do salário bruto
+
+Após o cálculo, o sistema deve exibir:
+
+-O salário bruto
+-O valor de cada tributo
+-O salário líquido (salário bruto menos os tributos) +  30% do salário bruto se Diretor, 20% do salário bruto, se Gerente, 10% so salário bruto , se Engenherio . Apresentar o cálculo desse benefício. 
+
+Requisitos:
+
+-Crie um formulário HTML para coletar os dados do funcionário (nome, cargo e salário bruto).
+-Utilize PHP para processar os dados enviados pelo formulário.
+-Realize os cálculos dos tributos e exiba os resultados na mesma página.
+-Valide se os campos foram preenchidos corretamente antes de realizar os cálculos.
+
+
+Exemplo de saída: 
+
+Nome do Funcionário: João Silva
+Cargo: Diretor
+Salário Bruto: R$ 5000,00
+
+Tributos:
+- INSS: R$ 450,00
+- IRRF: R$ 375,00
+- Vale Transporte: R$ 300,00
+
+Salário Líquido sem benefícios: R$ 3875,00
+Salário Líquido  com benefício (Diretor): R$ 3875,00 + R$1500(30% de 
+R$ 5000,00 ) é igual a : R$ 5375,00 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="aril.php" method="post">
+
+      <div class="form-grid">
+
+        <fieldset>
+
+          <legend>Dados:</legend>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome">
+          <br><label for="cargo">Cargo:</label>
+          <input type="text" id="cargo" name="cargo">
+          <br><label for="salario">Salário Bruto:</label>
+          <input type="number" id="salario" name="salario">
+          <br><button type="submit">Enviar</button>
+       
+        </fieldset>
+      
+      </div>
+
+    </form>
+
+</body>
+</html>
